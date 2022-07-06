@@ -16,12 +16,14 @@ Now the script is ready to run, pass in the algorithm with the `--algorithm` opt
 
 Examples:
 ```
-echo -e '2021-01-01,buy,10000.00,1.00000000\n2021-02-01,sell,20000.00,0.50000 000' | ./tasklotallocator --algorithm fifo
+echo -e '2021-01-01,buy,10000.00,1.00000000\n2021-02-01,sell,20000.00,0.50000000' | ./tasklotallocator --algorithm fifo
 
-echo -e '2021-01-01,buy,10000.00,1.00000000\n2021-01-02,buy,20000.00,1.000000 00\n2021-02-01,sell,20000.00,1.50000000' | ./tasklotallocator --algorithm fifo
+echo -e '2021-01-01,buy,10000.00,1.00000000\n2021-01-02,buy,20000.00,1.00000000\n2021-02-01,sell,20000.00,1.50000000' | ./tasklotallocator --algorithm fifo
 
-echo -e '2021-01-01,buy,10000.00,1.00000000\n2021-01-02,buy,20000.00,1.000000 00\n2021-02-01,sell,20000.00,1.50000000' | ./tasklotallocator --algorithm hifo
+echo -e '2021-01-01,buy,10000.00,1.00000000\n2021-01-02,buy,20000.00,1.00000000\n2021-02-01,sell,20000.00,1.50000000' | ./tasklotallocator --algorithm hifo
 ```
+
+To test, run `mix test`
 
 Assumptions made:
 * When computing the weighted average for task lots, fractional cents are rounded using Half-Even rounding.
