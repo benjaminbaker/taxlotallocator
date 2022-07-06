@@ -1,11 +1,15 @@
 # TaxLotAllocator
 
 **How to run**
+
 Install elixir on your machine if you do not already have it, you can follow instructions [here](https://elixir-lang.org/install.html)
 
 Get a local copy of the TaxLotAllocator repo
+
 Run `mix deps.get` from the main directory
+
 Run `mix compile`
+
 Run `mix escript.build`
 
 Now the script is ready to run, pass in the algorithm with the `--algorithm` option
